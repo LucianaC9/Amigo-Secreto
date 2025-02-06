@@ -1,11 +1,13 @@
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
-    --color-white: #FFFFFF;
+    --color-primary: #0066FF; /* Azul vibrante */
+    --color-secondary: #E6F7FF; /* Fondo suave azul claro */
+    --color-tertiary: #F0F8FF; /* Suave gris azulado */
+    --color-button: #00B8A9; /* Verde menta para los botones */
+    --color-button-hover: #019f89; /* Verde menta oscuro */
+    --color-text: #333333; /* Texto oscuro para buen contraste */
+    --color-white: #FFFFFF; /* Blanco */
+    --color-gradient-1: #00B8A9; /* Gradiente verde menta */
+    --color-gradient-2: #0066FF; /* Gradiente azul vibrante */
 }
 
 /* Estilos generales */
@@ -21,6 +23,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Poppins', sans-serif; /* Tipografía moderna */
+    color: var(--color-text);
 }
 
 .main-content {
@@ -39,11 +43,20 @@ body {
     padding: 40px 0 0;
 }
 
+/* Título principal */
+.main-title {
+    font-size: 48px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--color-white); /* Título en blanco para mejor visibilidad */
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil para mejorar la legibilidad */
+}
+
 /* Sección de entrada */
 .input-section {
     flex: 60%;
-    background-color: var(--color-secondary);
-    border: 1px solid #000;
+    background-color: var(--color-tertiary);
     border-radius: 64px 64px 0 0;
     display: flex;
     flex-direction: column;
@@ -52,17 +65,9 @@ body {
     width: 100%;
 }
 
-/* Títulos */
-.main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
-}
-
+/* Títulos de sección */
 .section-title {
-    font-family: "Inter", serif;
+    font-family: "Inter", sans-serif;
     font-size: 36px;
     font-weight: 700;
     color: var(--color-primary);
@@ -81,48 +86,95 @@ body {
 
 .input-name {
     width: 100%;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
+    padding: 15px;
+    border: 2px solid var(--color-primary); /* Bordes más modernos y coloridos */
+    border-radius: 25px;
     font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: var(--color-white); /* Fondo blanco para contraste */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
+.input-name:focus {
+    border-color: var(--color-button);
+    box-shadow: 0 0 10px var(--color-button);
+}
+
+/* Botones */
 .button-container {
     width: 300px;
     justify-content: center;
 }
 
-/* Estilos de entrada de texto */
-.input-title {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #333;
-    border-right: none;
-    border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Estilos de botón */
-button {
-    padding: 15px 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    border: 2px solid #000;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-
+/* Botón de añadir */
 .button-add {
-    background-color: var(--color-tertiary);
-    color: var(--color-text);
-    border-radius: 0 25px 25px 0;
+    background: linear-gradient(45deg, var(--color-gradient-1), var(--color-gradient-2)); /* Gradiente moderno */
+    color: var(--color-white);
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px; /* Bordes más redondeados */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background: linear-gradient(45deg, var(--color-gradient-2), var(--color-gradient-1)); /* Invertir gradiente en hover */
+    transform: translateY(-3px); /* Efecto hover suave */
+}
+
+/* Estilo de botones generales */
+button {
+    padding: 15px 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(45deg, var(--color-gradient-1), var(--color-gradient-2)); /* Gradiente para botones */
+    color: var(--color-white);
+}
+
+/* Botón "Sortear amigo" */
+.button-draw {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px 40px;
+    color: var(--color-white);
+    font-size: 16px;
+    background: linear-gradient(45deg, var(--color-gradient-1), var(--color-gradient-2)); /* Gradiente para sortear */
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-draw img {
+    margin-right: 10px;
+}
+
+.button-draw:hover {
+    background: linear-gradient(45deg, var(--color-gradient-2), var(--color-gradient-1)); /* Hover de gradiente */
+    transform: translateY(-2px);
+}
+
+/* Botón "Resetear lista" */
+.button-reset {
+    background: linear-gradient(45deg, var(--color-gradient-2), var(--color-gradient-1));
+    color: var(--color-white);
+    margin-top: 10px;
+    padding: 15px 40px;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+.button-reset:hover {
+    background: linear-gradient(45deg, var(--color-gradient-1), var(--color-gradient-2));
+    transform: translateY(-2px);
 }
 
 /* Listas */
@@ -134,29 +186,11 @@ ul {
     margin: 20px 0;
 }
 
+/* Resultado del sorteo */
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
+    color: #05DF05; /* Verde brillante */
     font-size: 22px;
     font-weight: bold;
     text-align: center;
-}
-
-/* Botón de sortear título */
-.button-draw {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 10px 40px;
-    color: var(--color-white);
-    background-color: var(--color-button);
-    font-size: 16px;
-}
-
-.button-draw img {
-    margin-right: 40px;
-}
-
-.button-draw:hover {
-    background-color: var(--color-button-hover);
 }
