@@ -1,2 +1,2 @@
 # Amigo-Secreto
-Proyecto Alura diseñado para fortalecer habilidades en lógica de programación, aplicando conceptos como funciones, variables, arrays, etc. A través del desarrollo de una aplicación.
+Amigo Secreto es una aplicación web creada con JavaScript, HTML y CSS. Permitiendo a los usuarios ingresar nombres de amigos en una lista para realizar un sorteo aleatorio y determinar quién es el "amigo secreto"
