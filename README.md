@@ -23,4 +23,4 @@ Cuando todos los nombres estén ingresados, haz clic en "Sortear Amigo" para sel
 
 Puedes reiniciar la lista en cualquier momento con el botón "Resetear Lista".
 
-git add assets/Amigo-Secreto1.gif README.md
+![Demostración de la aplicación Amigo Secreto](https://github.com/LucianaC9/Amigo-Secreto/blob/main/Amigo-Secreto1.gif)
